@@ -328,7 +328,7 @@ Tree.prototype.generateSelections = function () {
     var optionObj = new Option(id, optionValue, optionName, optionDescription, optionIndex, section);
     if (optionIndex) {
       self.keysToAdd[optionIndex] = id;
-    } else if (option.hasAttribute('selected')) {
+    } else if (option.hasAttribute('selected'&&option.getAttribute('selected')===true)) {
       keysToAddAtEnd.push(id);
     }
     self.selectOptions[id] = optionObj;
